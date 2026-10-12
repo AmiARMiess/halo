@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo — Answer any product question, instantly</title>
+  <meta name="description" content="Halo connects your warehouse, events and revenue tools, then turns raw rows into trustworthy dashboards, alerts and narratives your whole team can act on." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%237A5CFF'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23FF4D8D'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ══════════ NAV ══════════ -->
+  <header class="nav" id="navbar">
+    <div class="wrap nav__in">
+      <a class="brand" href="#top" aria-label="Halo home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" fill="url(#lg)"/><circle cx="16" cy="16" r="5.5" fill="#fff"/><circle cx="16" cy="16" r="9.5" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/><defs><linearGradient id="lg" x1="2" y1="2" x2="30" y2="30"><stop stop-color="#FF8A3D"/><stop offset=".5" stop-color="#FF4D8D"/><stop offset="1" stop-color="#7A5CFF"/></linearGradient></defs></svg>
+        </span>
+        <span class="brand__name">Halo</span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#features">Product</a>
+        <a href="#product">Platform</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#customers">Customers</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__cta">
+        <a href="#" class="btn btn--ghost btn--sm js-toast">Sign in</a>
+        <a href="#pricing" class="btn btn--ink btn--sm">Start free</a>
+      </div>
+      <button class="burger" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__dots" aria-hidden="true"></div>
+      <div class="wrap">
+        <a class="pill rev" href="#product">
+          <span class="pill__dot"></span>
+          <strong>New</strong>&nbsp;· Halo AI analyst is in public beta
+          <span class="pill__arrow">→</span>
+        </a>
+        <h1 class="rev">Answer any product question,<br /><em>the moment</em> you ask.</h1>
+        <p class="lede rev">Halo connects your warehouse, events and revenue tools — then turns raw rows into trustworthy dashboards, alerts and narratives your whole team can act on.</p>
+        <div class="hero__btns rev">
+          <a href="#pricing" class="btn btn--grad btn--lg js-toast">Start free — no card</a>
+          <a href="#product" class="btn btn--line btn--lg"><span class="play">▶</span> Watch 90-second tour</a>
+        </div>
+        <p class="hero__fine rev">Free 14-day trial&nbsp; ·&nbsp; SOC 2 Type II&nbsp; ·&nbsp; Live in an afternoon</p>
+
+        <div class="mock rev" id="heroMock" aria-label="Halo dashboard preview">
+          <div class="mock__chrome"><i></i><i></i><i></i><span class="mock__url">▣&nbsp; app.halo.dev/growth</span><span class="mock__live"><b></b>LIVE</span></div>
+          <div class="mock__body">
+            <aside class="mock__side">
+              <em class="on">◆ Overview</em><em>Explore</em><em>Metrics</em><em>Alerts</em><em>Stories</em><em>Team</em>
+            </aside>
+            <div class="mock__main">
+              <div class="mock__head">
+                <div><strong>Growth overview</strong><span>Last 30 days · all sources</span></div>
+                <div class="mock__tabs"><b class="on">30d</b><b>90d</b><b>12m</b></div>
+              </div>
+              <div class="kpis">
+                <div class="kpi"><small>ACTIVE USERS</small><strong>84,201</strong><span class="up">▲ 12.4%</span></div>
+                <div class="kpi"><small>MRR</small><strong>$412k</strong><span class="up">▲ 8.1%</span></div>
+                <div class="kpi"><small>ACTIVATION</small><strong>61.8%</strong><span class="up">▲ 3.6%</span></div>
+                <div class="kpi"><small>CHURN</small><strong>0.9%</strong><span class="down">▼ 0.4%</span></div>
+              </div>
+              <div class="chart">
+                <div class="chart__head"><strong>Weekly activated accounts</strong><span>Segment · Self-serve + Sales-assist</span></div>
+                <svg class="chart__svg" viewBox="0 0 640 170" preserveAspectRatio="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#7A5CFF" stop-opacity=".35"/><stop offset="1" stop-color="#7A5CFF" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="stroke" x1="0" y1="0" x2="640" y2="0">
+                      <stop stop-color="#FF8A3D"/><stop offset=".5" stop-color="#FF4D8D"/><stop offset="1" stop-color="#7A5CFF"/>
+                    </linearGradient>
+                  </defs>
+                  <g stroke="rgba(16,18,35,.08)" stroke-dasharray="3 5">
+                    <line x1="0" y1="34" x2="640" y2="34"/><line x1="0" y1="78" x2="640" y2="78"/><line x1="0" y1="122" x2="640" y2="122"/>
+                  </g>
+                  <path d="M0 138 C60 132 90 118 130 120 C180 122 210 96 260 92 C310 88 330 102 380 88 C430 74 460 52 510 46 C560 40 600 28 640 22 L640 170 L0 170 Z" fill="url(#fill)"/>
+                  <path d="M0 138 C60 132 90 118 130 120 C180 122 210 96 260 92 C310 88 330 102 380 88 C430 74 460 52 510 46 C560 40 600 28 640 22" fill="none" stroke="url(#stroke)" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="510" cy="46" r="5" fill="#FF4D8D"/><circle cx="510" cy="46" r="9" fill="#FF4D8D" opacity=".2"/>
+                </svg>
+              </div>
+              <div class="feed">
+                <div class="feed__row"><code>✦ AI</code><span>Activation up <b>+3.6%</b> after onboarding v4 — driven by checklist completion</span><b class="ok">insight</b></div>
+                <div class="feed__row"><code>⚡ Alert</code><span>p95 query latency in <b>eu-west</b> crossed 800&nbsp;ms</span><b class="warn">watch</b></div>
+                <div class="feed__row"><code>◆ Sync</code><span>Stripe + Snowflake reconciled — <b>0</b> metric drift detected</span><b class="ok">healthy</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ LOGOS ══════════ -->
+    <section class="logos">
+      <div class="wrap">
+        <p class="logos__title rev">Trusted by data teams at fast-moving companies</p>
+        <div class="logos__row rev">
+          <span class="logo">Northwind</span><span class="logo">MONOGRAM</span><span class="logo">Hyperion</span>
+          <span class="logo">Lattice&nbsp;Labs</span><span class="logo">Vantage</span><span class="logo">kestrel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ FEATURES ══════════ -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="head rev">
+          <span class="kicker">Why Halo</span>
+          <h2>Every answer, one calm workspace.</h2>
+          <p>Stop stitching together BI tools, spreadsheets and Slack threads. Halo gives everyone — from engineers to execs — the same trusted numbers.</p>
+        </div>
+        <div class="grid">
+          <article class="card rev">
+            <span class="card__icon i-violet"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></span>
+            <h3>Live in minutes</h3>
+            <p>Point Halo at Snowflake, BigQuery, Postgres or Segment. It maps your schema and suggests a metric layer automatically.</p>
+          </article>
+          <article class="card rev">
+            <span class="card__icon i-pink"><svg viewBox="0 0 24 24"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/><circle cx="12" cy="12" r="4"/></svg></span>
+            <h3>Ask in plain English</h3>
+            <p>The AI analyst writes the SQL, shows its work, and cites the metric definitions it used — so you can trust every number.</p>
+          </article>
+          <article class="card rev">
+            <span class="card__icon i-orange"><svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg></span>
+            <h3>Alerts that matter</h3>
+            <p>Anomaly detection on the metrics you care about, delivered to Slack with a plain-language explanation of what changed.</p>
+          </article>
+          <article class="card rev">
+            <span class="card__icon i-teal"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span>
+            <h3>A governed metric layer</h3>
+            <p>Define “active user” once. Every dashboard, notebook and embedded chart inherits the same definition — forever.</p>
+          </article>
+          <article class="card rev">
+            <span class="card__icon i-rose"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9l2.5 2.5L7 14M12.5 14H17"/></svg></span>
+            <h3>Embed anywhere</h3>
+            <p>Drop live charts into your product, docs or board deck with one snippet. Secure, fast, and styled to match your brand.</p>
+          </article>
+          <article class="card rev">
+            <span class="card__icon i-ink"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>Enterprise-grade trust</h3>
+            <p>SOC 2 Type II, SSO/SAML, row-level permissions and full audit logs. Your security team will actually smile.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SHOWCASE ══════════ -->
+    <section class="section section--tint" id="product">
+      <div class="wrap showcase">
+        <div class="showcase__copy rev">
+          <span class="kicker">The platform</span>
+          <h2>From question to decision in three steps.</h2>
+          <ul class="ticks">
+            <li><b>Connect</b> — 40+ native sources, reverse-ETL ready, no pipeline baby-sitting.</li>
+            <li><b>Define</b> — a versioned metric layer your whole company agrees on.</li>
+            <li><b>Decide</b> — AI narratives, scheduled digests and alerts that explain themselves.</li>
+          </ul>
+          <a href="#pricing" class="btn btn--ink js-toast">Explore the platform →</a>
+        </div>
+        <div class="showcase__panel rev">
+          <div class="story">
+            <div class="story__head"><span class="story__badge">✦ Halo Story</span><span class="story__time">Generated 2&nbsp;min ago</span></div>
+            <h4>Why did activation jump last week?</h4>
+            <p>Activation rose from <b>58.2%</b> to <b>61.8%</b> (+3.6 pts). The lift concentrates in <b>self-serve signups</b> who completed the new onboarding checklist (v4) — they activate <b>2.3× faster</b> than the control group.</p>
+            <div class="story__chips"><span>Onboarding v4</span><span>Self-serve</span><span>Confidence 94%</span></div>
+            <div class="story__bars">
+              <div><span>Checklist completed</span><i style="--w:86%"></i><b>78%</b></div>
+              <div><span>Control group</span><i style="--w:34%"></i><b>31%</b></div>
+              <div><span>Invited a teammate</span><i style="--w:58%"></i><b>52%</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ STATS ══════════ -->
+    <section class="stats">
+      <div class="wrap stats__row">
+        <div class="stat rev"><strong><span data-count="12" data-dec="0">0</span>M</strong><span>events processed / minute</span></div>
+        <div class="stat rev"><strong><span data-count="8400" data-dec="0">0</span>+</strong><span>teams shipping with Halo</span></div>
+        <div class="stat rev"><strong><span data-count="99.99" data-dec="2">0</span>%</strong><span>uptime across all regions</span></div>
+        <div class="stat rev"><strong><span data-count="4.9" data-dec="1">0</span>/5</strong><span>average customer rating</span></div>
+      </div>
+    </section>
+
+    <!-- ══════════ TESTIMONIALS ══════════ -->
+    <section class="section" id="customers">
+      <div class="wrap">
+        <div class="head rev">
+          <span class="kicker">Customers</span>
+          <h2>Teams that stopped arguing about numbers.</h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote rev">
+            <div class="quote__stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“We replaced four tools with Halo. Our Monday metrics meeting went from 90 minutes of debate to a 15-minute decision.”</blockquote>
+            <figcaption><span class="av av--1">MK</span><div><b>Maya Kessler</b><span>VP Product, Northwind</span></div></figcaption>
+          </figure>
+          <figure class="quote rev">
+            <div class="quote__stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“The AI analyst writes better SQL than half my team — and it shows its sources, so we actually trust it in board meetings.”</blockquote>
+            <figcaption><span class="av av--2">DR</span><div><b>Daniel Reyes</b><span>Head of Data, Monogram</span></div></figcaption>
+          </figure>
+          <figure class="quote rev">
+            <div class="quote__stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“Alerts with plain-language explanations changed everything. Support spots issues before customers even notice them.”</blockquote>
+            <figcaption><span class="av av--3">AO</span><div><b>Amara Obi</b><span>Director of Ops, Hyperion</span></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ PRICING ══════════ -->
+    <section class="section section--tint" id="pricing">
+      <div class="wrap">
+        <div class="head rev">
+          <span class="kicker">Pricing</span>
+          <h2>Simple plans that scale with you.</h2>
+          <p>Every plan includes unlimited viewers, the metric layer and Slack alerts.</p>
+          <div class="toggle" role="group" aria-label="Billing period">
+            <button class="tg on" data-per="m" aria-pressed="true">Monthly</button>
+            <button class="tg" data-per="y" aria-pressed="false">Yearly <em>−20%</em></button>
+          </div>
+        </div>
+        <div class="plans">
+          <article class="plan rev">
+            <h3>Starter</h3><p class="plan__desc">For small teams finding their first signals.</p>
+            <div class="plan__price"><span class="amt" data-m="$29" data-y="$23">$29</span><small>/ user · mo</small></div>
+            <ul><li>3 connected sources</li><li>10k monthly events</li><li>AI analyst — 100 questions</li><li>Slack alerts</li><li>Email support</li></ul>
+            <a href="#" class="btn btn--line btn--block js-toast">Start free trial</a>
+          </article>
+          <article class="plan plan--pop rev">
+            <span class="plan__flag">Most popular</span>
+            <h3>Growth</h3><p class="plan__desc">For data-informed teams moving fast.</p>
+            <div class="plan__price"><span class="amt" data-m="$89" data-y="$71">$89</span><small>/ user · mo</small></div>
+            <ul><li>Unlimited sources</li><li>10M monthly events</li><li>AI analyst — unlimited</li><li>Embedded analytics</li><li>Anomaly alerts + digests</li><li>Priority support</li></ul>
+            <a href="#" class="btn btn--grad btn--block js-toast">Start free trial</a>
+          </article>
+          <article class="plan rev">
+            <h3>Enterprise</h3><p class="plan__desc">For orgs with serious governance needs.</p>
+            <div class="plan__price"><span class="amt" data-m="Custom" data-y="Custom">Custom</span><small>annual contract</small></div>
+            <ul><li>SSO / SAML + SCIM</li><li>Row-level permissions</li><li>Audit logs &amp; data residency</li><li>99.99% SLA</li><li>Dedicated success engineer</li></ul>
+            <a href="#" class="btn btn--line btn--block js-toast">Talk to sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ FAQ ══════════ -->
+    <section class="section" id="faq">
+      <div class="wrap slim">
+        <div class="head rev">
+          <span class="kicker">FAQ</span>
+          <h2>Questions? Answers.</h2>
+        </div>
+        <div class="faqs">
+          <div class="qa rev"><button class="qq" aria-expanded="false">How long does setup really take?<span class="chev"></span></button><div class="qa__a"><p>Most teams connect their warehouse and see their first live dashboard within an afternoon. The AI maps your schema automatically, so there are no lengthy modeling projects.</p></div></div>
+          <div class="qa rev"><button class="qq" aria-expanded="false">Where does my data live?<span class="chev"></span></button><div class="qa__a"><p>Halo queries your warehouse in place — data never leaves your cloud account. Metadata and cache live in the region you choose (US, EU or AU).</p></div></div>
+          <div class="qa rev"><button class="qq" aria-expanded="false">Can I trust the AI analyst's answers?<span class="chev"></span></button><div class="qa__a"><p>Every answer shows the generated SQL, the metric definitions used and a confidence score. Nothing is hidden — the AI works from your governed layer, not guesswork.</p></div></div>
+          <div class="qa rev"><button class="qq" aria-expanded="false">Do you support embedded analytics?<span class="chev"></span></button><div class="qa__a"><p>Yes — on Growth and above. Embed live, permission-aware charts in your product with a single snippet, styled to match your brand.</p></div></div>
+          <div class="qa rev"><button class="qq" aria-expanded="false">What happens after the trial?<span class="chev"></span></button><div class="qa__a"><p>Your workspace stays read-only on the free tier — nothing is deleted. Upgrade whenever you're ready; we never charge you automatically.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA ══════════ -->
+    <section class="cta">
+      <div class="wrap cta__in rev">
+        <h2>Your data already has the answers.</h2>
+        <p>Halo just makes them obvious. Start free today — invite the whole team.</p>
+        <div class="cta__btns">
+          <a href="#" class="btn btn--white btn--lg js-toast">Start free — no card</a>
+          <a href="#" class="btn btn--ghost-light btn--lg js-toast">Book a demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="#top">
+          <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" fill="url(#lg2)"/><circle cx="16" cy="16" r="5.5" fill="#fff"/><defs><linearGradient id="lg2" x1="2" y1="2" x2="30" y2="30"><stop stop-color="#FF8A3D"/><stop offset=".5" stop-color="#FF4D8D"/><stop offset="1" stop-color="#7A5CFF"/></linearGradient></defs></svg></span>
+          <span class="brand__name">Halo</span>
+        </a>
+        <p>The decision layer for your product data.</p>
+      </div>
+      <div><h5>Product</h5><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#product">Platform</a><a href="#">Changelog</a></div>
+      <div><h5>Company</h5><a href="#">About</a><a href="#">Blog</a><a href="#">Careers</a><a href="#">Press kit</a></div>
+      <div><h5>Resources</h5><a href="#">Docs</a><a href="#">API reference</a><a href="#faq">Support</a><a href="#">Status</a></div>
+      <div><h5>Legal</h5><a href="#">Privacy</a><a href="#">Terms</a><a href="#">DPA</a><a href="#">Security</a></div>
+    </div>
+    <div class="wrap foot__bar">
+      <span>© <span id="year">2026</span> Halo Labs, Inc. All rights reserved.</span>
+      <span class="foot__soc"><a href="#" aria-label="X">𝕏</a><a href="#" aria-label="GitHub">⌘</a><a href="#" aria-label="LinkedIn">in</a></span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status">✓ Nice — this is a demo button.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
